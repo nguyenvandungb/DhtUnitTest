@@ -162,3 +162,14 @@ func testPerformanceExample() {
         }
     }
 ```
+
+# III. How to run unit test in your xcode?
+
+## 1. Run all test class in project
+Xcode -> menu -> Product -> Test. Or you can use (command + U)
+## 2. Run all test method in specify class
+Xcode -> Project nagivation -> test nagivation -> choose class you want to run test -> press (|>) play button
+### 3. Run one test method in specify class
+Xcode -> Project nagivation -> test nagivation -> choose class you want to run test -> choose method want to run test -> press (|>) play button
+
+Note : After ran test if any method execute test have "green check" button, it mean that you pass. Otherwise fail.
