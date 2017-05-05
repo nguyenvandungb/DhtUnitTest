@@ -1,23 +1,23 @@
-<b>I. Summary </b>
-<b>1. What is unit test?</b>
+# I. Summary
+## 1. What is unit test?
 - Unit tests are small pieces of code that test the behavior of other code
 - Unit tess are greate way to write better code
 - Help find bugs early
 - Easy to maintain with modular code
 
-<b>2. Why Unit Testing?</b>
+## 2. Why Unit Testing?
 - Verify your code does what you expect
 - Make refactoring much less paintfull
 - Forces you to write smaller, more concise methods.
 
-<b>3. Is not Unit Test?</b>
+## 3. Is not Unit Test?
 - It talks to the database
 - It communicates across the network
 - It touches the file system
 - It can’t run at same time as any of your other unit tests
 - You have to do special things to your environment (such as edit config file)
 
-<b>4. A Good Unit Test</b>
+## 4. A Good Unit Test
 - Able to be fully automated
 - Tests a single logical  concept in the system
 - Consistently returns the same result (no random numbers, save those for integration tests)
@@ -27,15 +27,15 @@
 - Is Readable
 - Is Trustworthy
 
-<b>II- Unit test for iOS project</b>
+# II- Unit test for iOS project
 
-<b>1. Add Test Target</b>
+## 1. Add Test Target
 
 In Xcode 8 : goto edit menu -> add target -> find "iOS Unit Tesing bundle" -> select it.
 
-<b>2. Writing Test Classes and Methods</b>
+## 2. Writing Test Classes and Methods
 
-<b>a. Creating a Test Class</b>
+### a. Creating a Test Class
 
 In Xcode 8: see bottom left button (+) -> choose File -> Choose "Unit test Case Class". Remember that choose correct test target will add this file to.
 
