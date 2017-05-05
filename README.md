@@ -1,4 +1,13 @@
-# I. Summary
+# I. About DhtUnitTest project (written in swift)
+## 1. Purpose 
+- Implemete template to cover common Unit Test case. 
+Link common unit test case: https://docs.google.com/spreadsheets/d/1EL4dKIRIQyNaRIToQy9cW9NauQjWjJnspWVK-bsW2zc/edit#gid=0
+- You can browser project to see code example.
+
+## 2. How to implement test class, test method for new test case.
+
+
+# II. Summary
 ## 1. What is unit test?
 - Unit tests are small pieces of code that test the behavior of other code
 - Unit tess are greate way to write better code
@@ -27,7 +36,7 @@
 - Is Readable
 - Is Trustworthy
 
-# II- Unit test for iOS project
+# III- Unit test for iOS project
 
 ## 1. Add Test Target
 
@@ -163,7 +172,7 @@ func testPerformanceExample() {
     }
 ```
 
-# III. How to run unit test in your xcode?
+# IV. How to run unit test in your xcode?
 
 ## 1. Run all test class in project
 Xcode -> menu -> Product -> Test. Or you can use (command + U)
@@ -174,7 +183,7 @@ Xcode -> Project nagivation -> test nagivation -> choose class you want to run t
 
 Note : After ran test if any method execute test have "green check" button, it mean that you pass. Otherwise fail.
 
-# IV. Best practice
+# V. Best practice
 ## 1. What is the purpose of setUp method?
 - Actually have 2 methods 
     + class func setUp()
