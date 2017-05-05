@@ -173,3 +173,22 @@ Xcode -> Project nagivation -> test nagivation -> choose class you want to run t
 Xcode -> Project nagivation -> test nagivation -> choose class you want to run test -> choose method want to run test -> press (|>) play button
 
 Note : After ran test if any method execute test have "green check" button, it mean that you pass. Otherwise fail.
+
+# IV. Best practice
+## 1. What is the purpose of setUp method?
+- Actually have 2 methods 
+    + class func setUp()
+    + func setUp()
+    
+### a. class func setUp()
+- Is only run once during the entire test run.
+### b. func setUp()
+- It's run before every single test. If you write some test methods in same class. You might find yourself repeating the same code in every test method to obtain access to the app object state
+- You can write common code called before and after runs each test method runs.
+```
+override func setUp() {
+        super.setUp()
+        sessionTest = URLSession(configuration: URLSessionConfiguration.default)
+
+    }
+```
