@@ -151,3 +151,14 @@ class DhtUnitTestTests: XCTestCase {
 }
 
 ```
+### c. Writing Performance Tests
+More detail in there: https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html
+
+```
+func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+```
