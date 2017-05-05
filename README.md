@@ -39,6 +39,7 @@ In Xcode 8 : goto edit menu -> add target -> find "iOS Unit Tesing bundle" -> se
 
 In Xcode 8: see bottom left button (+) -> choose File -> Choose "Unit test Case Class". Remember that choose correct test target will add this file to.
 
+#Test Class Structure
 ```
 import XCTest
 @testable import DhtUnitTest
