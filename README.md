@@ -40,33 +40,31 @@ In Xcode 8 : goto edit menu -> add target -> find "iOS Unit Tesing bundle" -> se
 In Xcode 8: see bottom left button (+) -> choose File -> Choose "Unit test Case Class". Remember that choose correct test target will add this file to.
 
 ```
-#import <XCTest/XCTest.h>
- 
-@interface SampleCalcTests : XCTestCase
-@end
- 
-@implementation SampleCalcTests
- 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+import XCTest
+@testable import DhtUnitTest
+
+class DhtUnitTestTests: XCTestCase {
+    
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
 }
- 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
- 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
- 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-@end
 ```
