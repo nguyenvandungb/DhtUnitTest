@@ -187,8 +187,7 @@ Note : After ran test if any method execute test have "green check" button, it m
 - You can write common code called before and after runs each test method runs.
 ```
 override func setUp() {
-        super.setUp()
-        sessionTest = URLSession(configuration: URLSessionConfiguration.default)
-
-    }
+    super.setUp()
+    sessionTest = URLSession(configuration: URLSessionConfiguration.default)
+}
 ```
