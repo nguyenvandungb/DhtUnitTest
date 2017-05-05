@@ -74,3 +74,8 @@ From Apple: https://developer.apple.com/library/content/documentation/DeveloperT
 
 Notice that the implementation contains methods for instance setup and teardown with a basic implementation; these methods are not required. If all of the test methods in a class require the same code, you can customize setUp and tearDown to include it. The code you add runs before and after each test method runs. You can optionally add customized methods for class setup (+ (void)setUp) and teardown (+ (void)tearDown) as well, which run before and after all of the test methods in the class.
 
+### Writing Test Methods
+-  A test method is an instance method of a test class that begins with the prefix test.
+- Takes no parameters
+- Returns void,
+Example: func testIBOutlet(){}
