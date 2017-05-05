@@ -74,8 +74,39 @@ From Apple: https://developer.apple.com/library/content/documentation/DeveloperT
 
 Notice that the implementation contains methods for instance setup and teardown with a basic implementation; these methods are not required. If all of the test methods in a class require the same code, you can customize setUp and tearDown to include it. The code you add runs before and after each test method runs. You can optionally add customized methods for class setup (+ (void)setUp) and teardown (+ (void)tearDown) as well, which run before and after all of the test methods in the class.
 
-### Writing Test Methods
+### b. Writing Test Methods
 -  A test method is an instance method of a test class that begins with the prefix test.
 - Takes no parameters
 - Returns void,
 Example: func testIBOutlet(){}
+
+### c. Writing Tests of Asynchronous Operations
+-  XCTest has been enhanced in Xcode 6 to include the ability to serialize asynchronous execution in the test method, by waiting for the completion of an asynchronous callback or timeout.
+
+```
+func testAsynchronous() {
+  // given
+  let url = URL(string: "")
+  // 1
+  let promise = expectation(description: "Status code: 200")
+  
+  // when
+  let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
+    // then
+    if let error = error {
+      XCTFail("Error: \(error.localizedDescription)")
+      return
+    } else if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+      if statusCode == 200 {
+        // 2
+        promise.fulfill()
+      } else {
+        XCTFail("Status code: \(statusCode)")
+      }
+    }
+  }
+  dataTask.resume()
+  // 3
+  waitForExpectations(timeout: 5, handler: nil)
+}
+```
