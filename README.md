@@ -28,5 +28,6 @@
 - Is Trustworthy
 
 <b>II- Unit test for iOS project</b>
-<b>5. Add Test Target</b>
+
+<b>1. Add Test Target</b>
 In Xcode 8 : goto edit menu -> add target -> find "iOS Unit Tesing bundle" -> select it.
