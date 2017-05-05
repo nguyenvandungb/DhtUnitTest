@@ -30,4 +30,11 @@
 <b>II- Unit test for iOS project</b>
 
 <b>1. Add Test Target</b>
+
 In Xcode 8 : goto edit menu -> add target -> find "iOS Unit Tesing bundle" -> select it.
+
+<b>2. Writing Test Classes and Methods</b>
+
+<b>a. Creating a Test Class</b>
+
+In Xcode 8: see bottom left button (+) -> choose File -> Choose "Unit test Case Class". Remember that choose correct test target will add this file to.
