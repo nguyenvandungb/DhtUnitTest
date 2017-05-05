@@ -1,3 +1,4 @@
+<b>I. Summary </b>
 <b>1. What is unit test?</b>
 - Unit tests are small pieces of code that test the behavior of other code
 - Unit tess are greate way to write better code
@@ -26,3 +27,6 @@
 - Is Readable
 - Is Trustworthy
 
+<b>II- Unit test for iOS project</b>
+<b>5. Add Test Target</b>
+In Xcode 8 : goto edit menu -> add target -> find "iOS Unit Tesing bundle" -> select it.
