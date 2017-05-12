@@ -23,12 +23,6 @@ class ViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func checkGUIElements() -> Bool {
-        // Check IBOutlet
-        XCTAssertNotNil(self.testBtn, "Label could not be nil")
-        return true
-    }
-
     @IBAction func testAction(_ sender: Any) {
         print(NSStringFromClass(self.classForCoder) + "." + #function)
     }

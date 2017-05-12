@@ -1,5 +1,5 @@
 //
-//  Validation.swift
+//  SpecAction.swift
 //  DhtUnitTest
 //
 //  Created by Nguyen Van Dung on 5/12/17.
@@ -37,3 +37,8 @@ func validate(target: Any?, action: String?, expectedAction: String) {
     }
     validator(target, action, expectedAction)
 }
+
+
+
+public typealias ActionAssertion = (String, _ from: String) -> Void
+public typealias ButtonOutletAssertion = (String) -> (UIButton?)
