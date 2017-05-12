@@ -10,8 +10,4 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController {
-
-    func checkGUIElements() -> Bool {
-        return true
-    }
 }

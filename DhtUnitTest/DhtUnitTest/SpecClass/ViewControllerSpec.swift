@@ -25,55 +25,58 @@ class ViewControllerSpec: QuickSpec {
             fail(message ?? "")
         }
 
-        /**
-         *  This code will run before each test
-         */
-        beforeEach {
-            //try get install of view controller in storyboard and wake up it
-            controller = UIStoryboard.main().instantiateInitialViewController() as! ViewController
+        describe("view controller") { 
             /**
-             Need call this line to wake up view of view controller.
-             Make it ready to run test
+             *  This code will run before each test
              */
-            expect(controller.view).notTo(beNil())
-
-            setupActionValidator(validator: { (target, action, expectedAction) in
-                expect(target) === controller
-                expect(action).toNot(beNil())
-                if let action = action {
-                    expect(action) == expectedAction
-                }
-            })
-
-            // Capture the new viewController instance for each test
-            hasButtonsOutlet = outlet(viewController: controller)
-            receivesAction = action(viewController: controller)
-        }
-
-        // MARK: - IBOutlets
-        it ("has a testBtn outlet") {
-            _ = hasButtonsOutlet?("testBtn")
-        }
-
-        it ("receives a testAction: action from testBtn") {
-            receivesAction?("testAction", "testBtn")
-        }
-
-        describe("Test Common GUI element", closure: {
-            it("Test IBOutlet", closure: {
-                Logger.log(logString: "All IBoutlet connection is ok!")
-                expect(controller.checkGUIElements()).to(beTrue())
-            })
-        })
-
-        describe("Tap on test button") { 
             beforeEach {
-                controller.testBtn.sendActions(for: .touchUpInside)
+                //try get install of view controller in storyboard and wake up it
+                controller = UIStoryboard.main().instantiateInitialViewController() as! ViewController
+                /**
+                 Need call this line to wake up view of view controller.
+                 Make it ready to run test
+                 */
+                controller.loadView()
+                expect(controller.view).notTo(beNil())
+
+                setupActionValidator(validator: { (target, action, expectedAction) in
+                    Logger.log(logString: "expectedAction = \(expectedAction)")
+                    expect(target) === controller
+                    expect(action).toNot(beNil())
+                    if let action = action {
+                        expect(action) == expectedAction
+                    }
+                })
+
+                // Capture the new viewController instance for each test
+                hasButtonsOutlet = controller.outlet()
+                receivesAction = controller.action()
             }
 
-            it("makes a test request", closure: { 
-                
+            /**
+             * IBOutlet has conntected or not
+             */
+            it ("has a testBtn outlet") {
+                _ = hasButtonsOutlet?("testBtn")
+            }
+
+            /**
+             * Check UIControl/UIbarButtonItem has right action in target
+             */
+            it("receives a testAction: action from testBtn", closure: { 
+                receivesAction?("testAction:", "testBtn")
             })
+
+            // Test action of button
+            describe("Tap on test button") {
+                beforeEach {
+                    controller.testBtn.sendActions(for: .touchUpInside)
+                }
+                
+                it("makes a test request", closure: { 
+                    
+                })
+            }
         }
     }
 }
