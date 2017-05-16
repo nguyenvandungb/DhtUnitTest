@@ -31,7 +31,7 @@ class ViewControllerSpec: QuickSpec {
              */
             beforeEach {
                 //try get install of view controller in storyboard and wake up it
-                controller = UIStoryboard.main().instantiateInitialViewController() as! ViewController
+                controller = UIStoryboard.main().instantiateViewController(withIdentifier: "ViewController") as! ViewController
                 /**
                  Need call this line to wake up view of view controller.
                  Make it ready to run test
