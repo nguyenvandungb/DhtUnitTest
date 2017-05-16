@@ -17,6 +17,12 @@
 		5DC12CF81EC56F79001D1CB9 /* SpecAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC12CF71EC56F79001D1CB9 /* SpecAction.swift */; };
 		5DC12CFB1EC5700D001D1CB9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC12CF91EC5700D001D1CB9 /* Logger.swift */; };
 		5DC12CFC1EC5700D001D1CB9 /* UTViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC12CFA1EC5700D001D1CB9 /* UTViewController+Ext.swift */; };
+		5DF1B1681EC756190054FDBC /* AuthenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1B1651EC756190054FDBC /* AuthenViewController.swift */; };
+		5DF1B1691EC756190054FDBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1B1661EC756190054FDBC /* LoginViewController.swift */; };
+		5DF1B16A1EC756190054FDBC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1B1671EC756190054FDBC /* RegisterViewController.swift */; };
+		5DF1B16C1EC756B90054FDBC /* TransactionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1B16B1EC756B90054FDBC /* TransactionSpec.swift */; };
+		5DF1B1731EC757200054FDBC /* TransactionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1B16B1EC756B90054FDBC /* TransactionSpec.swift */; };
+		5DF1B1741EC757200054FDBC /* TransactionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1B16B1EC756B90054FDBC /* TransactionSpec.swift */; };
 		5DFEEB591EC44C1900A602CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFEEB581EC44C1900A602CB /* ViewController.swift */; };
 		5DFEEB5C1EC44C8100A602CB /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFEEB5B1EC44C8100A602CB /* UIStoryboard+Extension.swift */; };
 		5DFEEB5E1EC44DD700A602CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFEEB5D1EC44DD700A602CB /* BaseViewController.swift */; };
@@ -68,6 +74,10 @@
 		5DC12CF71EC56F79001D1CB9 /* SpecAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecAction.swift; sourceTree = "<group>"; };
 		5DC12CF91EC5700D001D1CB9 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		5DC12CFA1EC5700D001D1CB9 /* UTViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UTViewController+Ext.swift"; sourceTree = "<group>"; };
+		5DF1B1651EC756190054FDBC /* AuthenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenViewController.swift; sourceTree = "<group>"; };
+		5DF1B1661EC756190054FDBC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5DF1B1671EC756190054FDBC /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5DF1B16B1EC756B90054FDBC /* TransactionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionSpec.swift; sourceTree = "<group>"; };
 		5DFEEB541EC44C0300A602CB /* ViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		5DFEEB581EC44C1900A602CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DFEEB5B1EC44C8100A602CB /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
@@ -159,12 +169,23 @@
 			path = DhtUnitTestTests;
 			sourceTree = "<group>";
 		};
+		5DF1B1641EC756190054FDBC /* Authen */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1B1651EC756190054FDBC /* AuthenViewController.swift */,
+				5DF1B1661EC756190054FDBC /* LoginViewController.swift */,
+				5DF1B1671EC756190054FDBC /* RegisterViewController.swift */,
+			);
+			path = Authen;
+			sourceTree = "<group>";
+		};
 		5DFEEB521EC44C0300A602CB /* SpecClass */ = {
 			isa = PBXGroup;
 			children = (
 				5DC12CF91EC5700D001D1CB9 /* Logger.swift */,
 				5DC12CFA1EC5700D001D1CB9 /* UTViewController+Ext.swift */,
 				5DFEEB541EC44C0300A602CB /* ViewControllerSpec.swift */,
+				5DF1B16B1EC756B90054FDBC /* TransactionSpec.swift */,
 				5DC12CF71EC56F79001D1CB9 /* SpecAction.swift */,
 			);
 			path = SpecClass;
@@ -173,6 +194,7 @@
 		5DFEEB571EC44C1900A602CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5DF1B1641EC756190054FDBC /* Authen */,
 				5DFEEB581EC44C1900A602CB /* ViewController.swift */,
 				5DFEEB5D1EC44DD700A602CB /* BaseViewController.swift */,
 			);
@@ -514,12 +536,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF1B1691EC756190054FDBC /* LoginViewController.swift in Sources */,
+				5DF1B16A1EC756190054FDBC /* RegisterViewController.swift in Sources */,
 				5DC12CF81EC56F79001D1CB9 /* SpecAction.swift in Sources */,
+				5DF1B1681EC756190054FDBC /* AuthenViewController.swift in Sources */,
 				5DC12CFC1EC5700D001D1CB9 /* UTViewController+Ext.swift in Sources */,
 				5DFEEB5E1EC44DD700A602CB /* BaseViewController.swift in Sources */,
 				5DFEEB591EC44C1900A602CB /* ViewController.swift in Sources */,
 				5DC12CFB1EC5700D001D1CB9 /* Logger.swift in Sources */,
 				5DFEEB5C1EC44C8100A602CB /* UIStoryboard+Extension.swift in Sources */,
+				5DF1B16C1EC756B90054FDBC /* TransactionSpec.swift in Sources */,
 				5DA961BD1EBC174200D9E763 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF1B1731EC757200054FDBC /* TransactionSpec.swift in Sources */,
 				5DA961D21EBC174300D9E763 /* DhtUnitTestTests.swift in Sources */,
 				5DFEEBAD1EC4559A00A602CB /* UIStoryboard+Extension.swift in Sources */,
 				5DFEEBDB1EC4670600A602CB /* ViewControllerSpec.swift in Sources */,
@@ -540,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF1B1741EC757200054FDBC /* TransactionSpec.swift in Sources */,
 				5DFEEBC51EC4585E00A602CB /* UIStoryboard+Extension.swift in Sources */,
 				5DFEEBC31EC4585100A602CB /* BaseViewController.swift in Sources */,
 				5DFEEBBA1EC4580800A602CB /* TestCaseTests.swift in Sources */,
